@@ -17,7 +17,7 @@ version: '3.7'
 services:
   service-eagle:
     restart: always
-    image: tbd
+    image: dkranzl/service-eagle:latest
     ports:
       - 8080:80
     environment:
@@ -28,7 +28,7 @@ services:
       - ./links.json:/usr/share/nginx/html/assets/data/links.json
 ```
 ### links.json
-see `src/assets/`
+see `src/assets/data/links.json`
 
 ### Environment Variables
 #### Overview
@@ -43,6 +43,3 @@ see `src/assets/`
 - PAGE_HEADER (`My Services`): header of the page; also sets the page title
 - PAGE_HEADER_ICON (`/assets/logo/ServiceEagle.png`): header icon of the page; also sets the favicon
 - DATA_SOURCE (`/assets/data/links.json`): url to links configuration file
-
-## Building the docker container
-`docker build - < Dockerfile`
