@@ -1,0 +1,14 @@
+<div class="page-container">
+    <h1>
+        <img [src]="pageHeaderIcon">
+        {{ pageHeader }}
+    </h1>
+    <div class="link-entries-box">
+        <div class="link-entry" *ngFor="let link of linkEntries">
+            <a target="_blank" [href]="link.url">
+                <img [src]="link.icon">
+                <h2>{{ link.name }}</h2>
+            </a>
+        </div>
+    </div>
+</div>
